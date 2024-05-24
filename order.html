@@ -1,0 +1,307 @@
+<html>
+<title>
+Hapi Hapi Foods
+</title>
+
+<head>
+</head>
+<style>
+body{
+ background-image: url(wings.jpg);
+}
+
+.back{
+position: relative;
+text-align: center;
+color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.text-blocka{
+  width: 250px;
+  height: 125px;
+  position: absolute;
+  top: 15%;
+  left: 32%;
+  margin: -50px 0 0 -50px;
+}
+
+
+.text-blockb{
+  width: 250px;
+  height: 125px;
+  position: absolute;
+  top: 115%;
+  left: 34%;
+  margin: -50px 0 0 -50px;
+}
+
+
+
+
+
+
+
+
+.Choice{
+  border: none;
+  position: absolute;
+  top: 36%;
+  left: 34%;
+  margin: -50px 0 0 -50px;
+}
+
+.Choice2{
+  border: none;
+  position: absolute;
+  top: 36%;
+  left: 57%;
+  margin: -50px 0 0 -50px;
+}
+
+.Choice3{
+  border: none;
+  position: absolute;
+  top: 63%;
+  left: 34%;
+  margin: -50px 0 0 -50px;
+}
+
+.Choice4{
+  border: none;
+  position: absolute;
+  top: 63%;
+  left: 57%;
+  margin: -50px 0 0 -50px;
+}
+
+.Choice5{
+  border: none;
+  position: absolute;
+  top: 90%;
+  left: 34%;
+  margin: -50px 0 0 -50px;
+}
+
+.Choice6{
+  border: none;
+  position: absolute;
+  top: 90%;
+  left: 57%;
+  margin: -50px 0 0 -50px;
+}
+
+
+
+
+
+
+
+
+
+.link{
+  position: absolute;
+  top: 13%;
+  left: 35%;
+  margin: -50px 0 0 -50px;
+}
+
+.link2{
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+}
+
+
+.link4{
+  position: absolute;
+  top: 13%;
+  left: 65%;
+  margin: -50px 0 0 -50px;
+}
+
+
+
+
+
+
+
+
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  top: 125%;
+  left: 65%;
+  margin: -50px 0 0 -50px;
+}
+
+</style>
+
+<body>
+<div class="back">
+<img src="back.jpg" height="200%;" width="50%;">
+</div>
+
+
+<div class="text-blocka">
+<h1>Wings of Pedro</h1>
+</div>
+
+
+<div class="text-blockb">
+<p id="out"></p>
+</div>
+
+
+
+
+
+<div class="Choice">
+<a href= "#" class="Button" onclick="func()">
+<img src="pic.jpg" style="width:300px;height:150px;">
+<input type="text" id="flavor" value="Buffalo   Php100.00" readonly>
+</a>
+</div>
+
+<div class="Choice2">
+<a href= "#" class="Button" onclick="func2()">
+<img src="pic2.jpg" style="width:300px;height:150px;">
+<input type="text" id="flavor2" value="Soy Garlic   Php100.00" readonly>
+</a>
+</div>
+
+<div class="Choice3">
+<a href= "#" class="Button" onclick="func3()">
+<img src="pic3.jpg" style="width:300px;height:150px;">
+<input type="text" id="flavor3" value="Salted Egg   Php100.00" readonly>
+</a>
+</div>
+
+<div class="Choice4">
+<a href= "#" class="Button" onclick="func4()">
+<img src="pic4.jpg" style="width:300px;height:150px;">
+<input type="text" id="flavor4" value="Parmesan    Php100.00" readonly>
+</a>
+</div>
+
+<div class="Choice5">
+<a href= "#" class="Button" onclick="func5()">
+<img src="pic5.jpg" style="width:300px;height:150px;">
+<input type="text" id="flavor5" value="Hickory    Php100.00" readonly>
+</a>
+</div>
+
+<div class="Choice6">
+<a href= "#" class="Button" onclick="func6()">
+<img src="pic6.jpg" style="width:300px;height:150px;">
+<input type="text" id="flavor6" value="Siracha    Php100.00" readonly>
+</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="button">
+<a href= "checkout.html" class="Button">Go to Checkout</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="link">
+<a href= "front.html">Home</a>
+</div>
+
+<div class="link2">
+<a href= "order.html">Order page</a>
+</div>
+<div class="link4">
+<a href= "About.html">About us</a>
+
+
+
+
+<script language="JavaScript">
+function func()
+{
+try {
+ 
+	var x = "";
+	var x = localStorage.getItem("item");
+	localStorage.setItem("item", x + "<br>" + document.getElementById("flavor").value);
+	
+	document.getElementById("out").innerHTML = x + "<br>" +  document.getElementById("flavor").value;
+	//document.getElementById("out").innerHTML = localStorage.getItem("item");
+
+}
+catch(err) {
+  document.getElementById("out").innerHTML = err.message;
+}
+
+  //alert(x);
+  
+}
+
+function func2()
+{
+  
+	localStorage.setItem("item", document.getElementById("flavor").value);
+	document.getElementById("out").innerHTML = localStorage.getItem("item");
+}
+
+function func3()
+{
+  let x = document.getElementById("flavor3").value;
+  document.getElementById("out").innerHTML = x;
+}
+
+function func4()
+{
+  let x = document.getElementById("flavor4").value;
+  document.getElementById("out").innerHTML = x;
+}
+
+function func5()
+{
+  let x = document.getElementById("flavor5").value;
+  document.getElementById("out").innerHTML = x;
+}
+
+function func6()
+{
+  let x = document.getElementById("flavor6").value;
+  document.getElementById("out").innerHTML = x;
+}
+
+</script>
+
+
+
+</div>
+</body>
+</html>

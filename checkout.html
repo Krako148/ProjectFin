@@ -1,0 +1,134 @@
+<html>
+<title>
+Hapi Hapi Foods
+</title>
+
+<head></head>
+<style>
+body{
+ background-image: url(wings.jpg);
+}
+
+.back{
+position: relative;
+text-align: center;
+color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.text-blocka{
+  width: 250px;
+  height: 125px;
+  position: absolute;
+  top: 15%;
+  left: 32%;
+  margin: -50px 0 0 -50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Choice{
+  border: none;
+  position: absolute;
+  top: 36%;
+  left: 34%;
+  margin: -50px 0 0 -50px;
+}
+
+
+
+
+.link{
+  position: absolute;
+  top: 13%;
+  left: 35%;
+  margin: -50px 0 0 -50px;
+}
+
+.link2{
+  position: absolute;
+  top: 13%;
+  left: 45%;
+  margin: -50px 0 0 -50px;
+}
+
+.link3{
+  position: absolute;
+  top: 13%;
+  left: 55%;
+  margin: -50px 0 0 -50px;
+}
+
+.link4{
+  position: absolute;
+  top: 13%;
+  left: 65%;
+  margin: -50px 0 0 -50px;
+}
+
+
+</style>
+
+<body>
+<div class="back">
+<img src="back.jpg" height="200%;" width="50%;">
+</div>
+
+<div class="text-blocka">
+<h1>Wings of Pedro</h1>
+</div>
+
+
+
+<div class="Choice">
+<p id="cart">TEXT</p>
+</div>
+
+
+
+
+
+<div class="link">
+<a href= "front.html">Home</a>
+</div>
+
+<div class="link2">
+<a href= "order.html">Order page</a>
+</div>
+
+<div class="link3">
+<a href= "checkout.html">Checkout page</a>
+</div>
+
+<div class="link4">
+<a href= "About.html">About us</a>
+</div>
+</body>
+
+
+
+<script language="JavaScript">
+
+
+window.onload = alert(localStorage.getItem("item"));
+document.getElementById("cart").innerHTML = localStorage.getItem("item");
+
+
+
+
+</script>
+</html>
